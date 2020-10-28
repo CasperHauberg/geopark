@@ -4,7 +4,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: url("../img/image-1.jpg");
+  background: url("../img/img-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,4 +16,30 @@
   height: 100%;
   background-color: white;
   opacity: 0.7;
+}
+
+@mixin bg($image) {
+  width: 100%;
+  height: 240px;
+  background-image: url($image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-1 {
+  @include bg("../img/img-3.jpg");
+}
+
+.bg-2 {
+  @include bg("../img/img-2.jpg");
+}
+
+.bg-3 {
+  @include bg("../img/img-4.jpg");
+}
+
+a.bg-1:hover {
+  color: $primary;
+  text-decoration: none;
 }
